@@ -1,1 +1,1 @@
-# learning-golang
+# booking-app
