@@ -16,7 +16,7 @@ func main() {
 	var userName string
 	var userTickets int
 	// ask user for their name
-	fmt.scan(&userName)
+	fmt.Scan(&userName)
 
 	fmt.Println(remainingTickets)
 	fmt.Println(&remainingTickets)
