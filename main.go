@@ -57,7 +57,7 @@ func main() {
 				break
 			}
 		} else {
-			fmt.Printf("We only have %v tickets remaining, so you cant book %v tickets.\n", remainingTickets, userTickets)
+			fmt.Println("Your input data is invalid, try again")
 		}
 	}
 }
