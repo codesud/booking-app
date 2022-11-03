@@ -45,6 +45,12 @@ func main() {
 			var names = strings.Fields(booking)
 			firstNames = append(firstNames, names[0] )
 		}
-	fmt.Printf("The first names of bookings are: %v\n", firstNames)		
+		fmt.Printf("The first names of bookings are: %v\n", firstNames)	
+	
+		if remainingTickets ==0 {
+			// end program
+			fmt.Println("Our conference is booked out. Come back next year.")
+			break
+		}
 	}
 }
