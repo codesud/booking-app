@@ -11,7 +11,7 @@ func main() {
 	var remainingTickets uint = 50
 	bookings := []string{}
 
-	greetUsers(conferenceName)
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
      
 	for {
 		var firstName string
