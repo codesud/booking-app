@@ -68,19 +68,19 @@ func main() {
 			}
 		}
 	}
-
-	city := "London"
-
-	switch city {
-		case "New York":
-			// execute code for booking New York conference tickets
-		case "Singapore", "Hong Kong":
-			// execute code for booking Singapore conference tickets
-		case "London", "Berlin":
-			// some code here
-		case "Mexico City":
-			// some code here
-		default:
-			fmt.Println("No valid city selected")
-	}
 }
+
+// city := "London"
+
+// switch city {
+// 	case "New York":
+// 		// execute code for booking New York conference tickets
+// 	case "Singapore", "Hong Kong":
+// 		// execute code for booking Singapore and Hong Kong conference tickets
+// 	case "London", "Berlin":
+// 		// some code here
+// 	case "Mexico City":
+// 		// some code here
+// 	default:
+// 		fmt.Println("No valid city selected")
+// }
