@@ -11,7 +11,7 @@ func main() {
 	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend.")
 
-	var bookings []string
+	bookings := []string{}
 	
 	var firstName string
 	var lastName string
@@ -32,11 +32,9 @@ func main() {
 
 	remainingTickets = remainingTickets - userTickets
 	bookings = append(bookings, firstName + " " + lastName)
-	fmt.Printf("The whole slice: %v\n", bookings)
-	fmt.Printf("The first value: %v\n", bookings[0])
-	fmt.Printf("Slice type: %T\n", bookings)
-	fmt.Printf("Slice length: %v\n", len(bookings))
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive confirmation email at %v.\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v.\n", remainingTickets, conferenceName)
+
+	fmt.Println("These are all our bookings: %v\n", bookings)
 }
