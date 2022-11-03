@@ -68,4 +68,21 @@ func main() {
 			}
 		}
 	}
+
+	city := "London"
+
+	switch city {
+		case "New York":
+			// execute code for booking New York conference tickets
+		case "Singapore":
+			// execute code for booking Singapore conference tickets
+		case "London":
+			// some code here
+		case "Berlin":
+			//some code here
+		case "Mexico City":
+			// some code here
+		case "Hong Kong":
+			//some code here
+	}
 }
