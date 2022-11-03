@@ -34,7 +34,7 @@ func main() {
 		fmt.Scan(&userTickets)
 
 		isValidName := len(firstName) >= 2 && len(lastName) >= 2
-		isValidEmail := strings.Contains(email, "@", ".")
+		isValidEmail := strings.Contains(email, "@")
 		isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets 
 		
 		if isValidName && isValidEmail && isValidTicketNumber {
