@@ -36,9 +36,8 @@ func main() {
 		isValidName := len(firstName) >= 2 && len(lastName) >= 2
 		isValidEmail := strings.Contains(email, "@")
 		isValidTicketNumber := userTickets > 0 && userTickets <= remainingTickets 
-		isValidCity := city == "Singapore" || city == "London"
-
-		if {
+		
+		if isValidName && isValidEmail && isValidTicketNumber {
 			remainingTickets = remainingTickets - userTickets
 			bookings = append(bookings, firstName + " " + lastName)
 
