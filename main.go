@@ -52,7 +52,7 @@ func main() {
 				fmt.Println("Our conference is booked out. Come back next year.")
 				break
 			}
-		else {
+		} else {
 			fmt.Printf("We only have %v tickets remaining, so you cant book %v tickets.\n", remainingTickets, userTickets)
 		}
 	}
