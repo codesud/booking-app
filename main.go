@@ -19,7 +19,7 @@ func main() {
 		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets)
   		
 		if isValidName && isValidEmail && isValidTicketNumber {
-			func bookTicket(userTickets, firstName, lastName, email)
+			bookTicket(userTickets, firstName, lastName, email)
 
 			firstNames := getFirstNames()
 			fmt.Printf("The first names of bookings are: %v\n", firstNames)	
