@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"booking-app/helper"
+	"helper"
 )
 
 const conferenceTickets int = 50
