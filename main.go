@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"helper"
 )
 
 const conferenceTickets int = 50
@@ -54,8 +53,7 @@ func greetUsers() {
 func getFirstNames() []string {
 	firstNames := []string{}
 	for _, booking := range bookings {
-		var names = strings.Fields(booking)
-		firstNames = append(firstNames, booking["firstName"])
+			firstNames = append(firstNames, booking["firstName"])
 	}
 	return firstNames
 }
