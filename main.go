@@ -5,23 +5,23 @@ import (
 	"strings"
 )
 
-func main() {
-	 
-	conferenceName := "Go Conference"
-	const conferenceTickets int = 50
-	var remainingTickets uint = 50
-	bookings := []string{}
+const conferenceTickets int = 50
+var conferenceName = "Go Conference"
+var remainingTickets uint = 50
+var bookings = []string{}
 
-	greetUsers(conferenceName, conferenceTickets, remainingTickets)
+func main() {
+	
+	greetUsers()
      
 	for {
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets)
   		
 		if isValidName && isValidEmail && isValidTicketNumber {
-			func bookTicket(remainingTickets, userTickets, bookings, firstName, lastName, email, conferenceName)
+			func bookTicket(userTickets, firstName, lastName, email)
 
-			firstNames := getFirstNames(bookings)
+			firstNames := getFirstNames()
 			fmt.Printf("The first names of bookings are: %v\n", firstNames)	
 		
 			if remainingTickets ==0 {
@@ -43,13 +43,13 @@ func main() {
 	}
 }
 
-func greetUsers(confName string, confTickets int, remainTickets uint) {
-	fmt.Printf("Welcome to %v booking application.\n", confName)
-	fmt.Printf("We have total of %v tickets and %v are still available.\n", confTickets, remainTickets)
+func greetUsers() {
+	fmt.Printf("Welcome to %v booking application.\n", conferenceName)
+	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend.")
 }
 
-func getFirstNames(bookings []string) []string {
+func getFirstNames() []string {
 	firstNames := []string{}
 	for _, booking := range bookings {
 		var names = strings.Fields(booking)
@@ -86,7 +86,7 @@ func getUserInput() (string, string, string, uint){
 	return firstName, lastName, email, userTickets
 }
 
-func bookTicket(remainingTickets uint, userTickets uint, bookings []string, firstName string, lastName string, email string, conferenceName string) {
+func bookTicket(userTickets uint, firstName string, lastName string, email string) {
 	remainingTickets = remainingTickets - userTickets
 	bookings = append(bookings, firstName + " " + lastName)
 
