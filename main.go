@@ -7,8 +7,9 @@ import (
 )
 
 const conferenceTickets int = 50
+
+var RemainingTickets uint = 50
 var conferenceName = "Go Conference"
-var remainingTickets uint = 50
 var bookings = []string{}
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
      
 	for {
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets)
+		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
   		
 		if isValidName && isValidEmail && isValidTicketNumber {
 			bookTicket(userTickets, firstName, lastName, email)
