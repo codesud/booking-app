@@ -103,6 +103,6 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 func sendTicket(userTickets uint, firstName string, lastName string, email string) {
 	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
 	fmt.Println("#################")
-	fmt.Printf("Sending ticket:\n %v \nto email address %v", ticket, email)
+	fmt.Printf("Sending ticket:\n %v \nto email address %v\n", ticket, email)
 	fmt.Println("#################")
 }
