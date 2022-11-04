@@ -18,7 +18,7 @@ func main() {
      
 	for {
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, RemainingTickets)
   		
 		if isValidName && isValidEmail && isValidTicketNumber {
 			bookTicket(userTickets, firstName, lastName, email)
@@ -26,7 +26,7 @@ func main() {
 			firstNames := getFirstNames()
 			fmt.Printf("The first names of bookings are: %v\n", firstNames)	
 		
-			if remainingTickets ==0 {
+			if RemainingTickets ==0 {
 				// end program
 				fmt.Println("Our conference is booked out. Come back next year.")
 				break
@@ -47,7 +47,7 @@ func main() {
 
 func greetUsers() {
 	fmt.Printf("Welcome to %v booking application.\n", conferenceName)
-	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
+	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, RemainingTickets)
 	fmt.Println("Get your tickets here to attend.")
 }
 
@@ -82,9 +82,9 @@ func getUserInput() (string, string, string, uint){
 }
 
 func bookTicket(userTickets uint, firstName string, lastName string, email string) {
-	remainingTickets = remainingTickets - userTickets
+	RemainingTickets = remainingTickets - userTickets
 	bookings = append(bookings, firstName + " " + lastName)
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive confirmation email at %v.\n", firstName, lastName, userTickets, email)
-	fmt.Printf("%v tickets remaining for %v.\n", remainingTickets, conferenceName)
+	fmt.Printf("%v tickets remaining for %v.\n", RemainingTickets, conferenceName)
 }
