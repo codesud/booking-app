@@ -6,10 +6,17 @@ import (
 )
 
 const conferenceTickets int = 50
-
 var RemainingTickets uint = 50
 var conferenceName = "Go Conference"
 var bookings = make([]map[string]string, 0) // create an empty list of maps with initial size as zero
+
+struct {
+	firstName string
+	lastName string
+	email string
+	numberOfTickets uint
+	isOptedInForNewsletter bool
+}
 
 func main() {
 	
