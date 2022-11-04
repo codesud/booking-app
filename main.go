@@ -17,7 +17,7 @@ func main() {
      
 	for {
 		firstName, lastName, email, userTickets := getUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, RemainingTickets)
+		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets, RemainingTickets)
   		
 		if isValidName && isValidEmail && isValidTicketNumber {
 			bookTicket(userTickets, firstName, lastName, email)
@@ -87,7 +87,7 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 	userData["firstName"] = firstName
 	userData["lastName"] = lastName
 	userData["email"] = email
-	userData["numberOfTickets"] = strconv.FormatUint(unit64(userTickets), 10)
+	userData["numberOfTickets"] = strconv.FormatUint(uint64(userTickets), 10)
 
 	bookings = append(bookings, userData)
 
